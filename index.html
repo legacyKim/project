@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html id="clickScroll">
+
+<head>
+
+    <meta charset="utf-8" lang="ko">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+
+    <link rel="stylesheet" type="text/css" href="./css/basic.css">
+    <link rel="stylesheet" type="text/css" href="./css/pro.css">
+    <link rel="stylesheet" type="text/css" href="./css/tetris.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" /> 
+
+    <script type="text/javascript" src="./js/basic.js"></script>
+    <script type="text/javascript" src="./js/pro.js"></script>
+
+    <title>TaeHoon Portfolio</title>
+
+</head>
+
+<body class="body">
+
+    <div class="side_menu_pos">
+        <ul id="side_menu">
+
+        </ul>
+    </div>
+
+    <main id="main" style="height: 115%;">
+
+        <div style="display : flex; justify-content: center; align-items: center; height: 100%;">
+
+            <span style="color: #fff; font-size: 24px;">
+                아직 고민 중...
+            </span>
+
+        </div>
+
+    </main>
+
+    <wrap>
+
+        <div class="content_area">
+
+            <!-- slide -->
+
+            <section class="section">
+
+                <h3 class="title">Slide</h3>
+
+                <div class="slide">
+
+                    <div class="slideContainer">
+                        <div class="slideWrapper">
+                            <div class="slide_factor">
+                                <img src="./img/slide_00.jpg" alt="">
+                            </div>
+                            <div class="slide_factor"></div>
+                            <div class="slide_factor"></div>
+                            <div class="slide_factor">
+                                <img src="./img/slide_04.jpg" alt="">
+                            </div>
+                            <div class="slide_factor"></div>
+                            <div class="slide_factor"></div>
+                            <div class="slide_factor"></div>
+                        </div>
+
+                        <div class="slider">
+                            <ul class="slider-items">
+                                <li class="slider-item">
+                                    <img src="slide1.jpg" alt="Slide 1">
+                                </li>
+                                <li class="slider-item">
+                                    <img src="slide2.jpg" alt="Slide 2">
+                                </li>
+                                <li class="slider-item">
+                                    <img src="slide3.jpg" alt="Slide 3">
+                                </li>
+                            </ul>
+                        </div>
+
+
+                        <!-- <div>
+                            <img src="./img/slide_00.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_01.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_02.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_03.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_04.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_05.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_06.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_07.JPG" alt="">
+                        </div>
+                        <div>
+                            <img src="./img/slide_08.JPG" alt="">
+                        </div> -->
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="section">
+
+                <h3 class="title">Tetris</h3>
+
+                <div>
+
+                    <div class="grid">
+                        <canvas id="board" class="game-board"></canvas>
+                        <div class="right-column">
+                            <div>
+                                <h1>TETRIS</h1>
+                                <p>Score: <span id="score">0</span></p>
+                                <p>Lines: <span id="lines">0</span></p>
+                                <p>Level: <span id="level">0</span></p>
+                                <canvas id="next" class="next"></canvas>
+                            </div>
+                            <button onclick="play()" class="play-button">Play</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            
+            <script type="text/javascript" src="./js/tetris.js"></script>   
+
+        </div>
+
+    </wrap>
+
+
+</body>
+
+</html>
