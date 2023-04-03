@@ -31,7 +31,7 @@ class Board {
 
 let board = new Board();
 
-function play() {
+function play() {   
     board.reset();
     console.table(board.grid);
 }
