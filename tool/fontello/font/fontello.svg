@@ -1,0 +1,18 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2023 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="arrows-cw" unicode="&#xe800;" d="M0-150l0 402 402 0-160-160q108-107 258-107 125 0 222 75t130 192l138 0q-35-173-173-288t-317-114q-207 0-353 146z m10 598q35 174 173 288t317 114q207 0 354-146l146 146 0-402-402 0 160 160q-108 107-258 107-125 0-222-75t-130-192l-138 0z" horiz-adv-x="1000" />
+
+<glyph glyph-name="mail" unicode="&#xe801;" d="M929 11v428q-18-20-39-36-149-115-238-189-28-24-46-37t-48-28-57-13h-2q-26 0-57 13t-48 28-46 37q-88 74-238 189-21 16-39 36v-428q0-7 6-13t12-5h822q7 0 12 5t6 13z m0 586v14t-1 7-1 7-3 5-5 4-8 2h-822q-7 0-12-6t-6-12q0-94 83-159 107-84 223-176 4-3 20-17t25-21 25-17 28-16 24-5h2q11 0 24 5t28 16 25 17 25 21 20 17q116 92 224 176 30 24 56 65t26 73z m71 21v-607q0-37-26-63t-63-27h-822q-36 0-63 27t-26 63v607q0 37 26 63t63 26h822q37 0 63-26t26-63z" horiz-adv-x="1000" />
+
+<glyph glyph-name="mail-1" unicode="&#xe802;" d="M0 28v644q0 8 2 18l460-460q39-39 95-39 55 0 94 39l460 460q2-9 2-18v-644q0-37-26-62t-62-26h-937q-36 0-62 26t-26 62z m63 728q13 4 25 4h937q12 0 25-4l-463-463q-13-12-31-12t-30 12z" horiz-adv-x="1113.3" />
+
+<glyph glyph-name="mail-2" unicode="&#xe803;" d="M0-29l324 342 176-100 176 100 324-342-1000 0z m0 114l0 414 254-147z m0 503l0 141 1000 0 0-141-500-285z m746-236l254 147 0-414z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

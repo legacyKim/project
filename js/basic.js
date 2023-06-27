@@ -124,4 +124,51 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
+    // theme
+
+    // let root = document.querySelector(':root');
+    // let variables = getComputedStyle(root);
+    // variables.getPropertyValue('--main-bg');
+
+    // function setTheme(darkSchemeMediaQueryList) {
+
+    //     document.body.dataset.theme = theme
+    // }
+
+    // const mediaQuery = "(prefers-color-scheme: dark)"
+    // setTheme(window.matchMedia(mediaQuery))
+
+    // themeScreen.addEventListener("click", function () {
+
+    // });
+
+    const themeScreen = this.getElementById('theme_screen');
+
+    function themeChange (theme) {
+        document.documentElement.className = theme;
+        console.log(theme);
+    }
+
+    themeScreen.addEventListener("click", function(){
+
+        if (themeScreen.classList.contains('dark')) {
+            var theme = 'light';
+            themeChange(theme);
+            console.log('change light');
+
+            themeScreen.classList.remove('dark');
+            themeScreen.classList.add('light');
+        }
+         else {
+            var theme = 'dark';
+            themeChange(theme);
+            console.log('change dark');
+
+            themeScreen.classList.remove('light');
+            themeScreen.classList.add('dark');
+        }
+
+    });
+
+
 });
