@@ -41,7 +41,7 @@ sub { bottom: -0.25em; }
 sup { top: -0.5em; }
 
 
-img { border-style: none; }
+img { border-style: none; width: 100%; height: 100%; object-fit: contain; }
 
 
 button,

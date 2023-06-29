@@ -124,24 +124,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // theme
-
-    // let root = document.querySelector(':root');
-    // let variables = getComputedStyle(root);
-    // variables.getPropertyValue('--main-bg');
-
-    // function setTheme(darkSchemeMediaQueryList) {
-
-    //     document.body.dataset.theme = theme
-    // }
-
-    // const mediaQuery = "(prefers-color-scheme: dark)"
-    // setTheme(window.matchMedia(mediaQuery))
-
-    // themeScreen.addEventListener("click", function () {
-
-    // });
-
     const themeScreen = this.getElementById('theme_screen');
 
     function themeChange (theme) {
