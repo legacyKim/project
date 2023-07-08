@@ -1,6 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    let dragged;
+    const dragList = document.getElementById("draggable");
+
+    const dragData = [
+        {
+            id: 0,
+            title: "Demo title 01",
+            img: "./img/slide_00.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }, {
+            id: 1,
+            title: "Demo title 02",
+            img: "./img/slide_01.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }, {
+            id: 2,
+            title: "Demo title 03",
+            img: "./img/slide_02.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }, {
+            id: 3,
+            title: "Demo title 04",
+            img: "./img/slide_03.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }, {
+            id: 4,
+            title: "Demo title 05",
+            img: "./img/slide_04.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }, {
+            id: 5,
+            title: "Demo title 06",
+            img: "./img/slide_05.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }, {
+            id: 6,
+            title: "Demo title 07",
+            img: "./img/slide_06.JPG",
+            contents: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, velit quibusdam omnis nam labore consequuntur pariatur, facilis explicabo eveniet sed ad dolorum quidem esse quam aut non amet dolores repellat."
+        }
+    ]
+
+    for (var list = 0; list < dragData.length; list++) {
+
+        const listItem = document.createElement('a');
+        listItem.draggable = true;
+        listItem.href = "javascript:void(0)";
+        listItem.innerHTML = `
+          <div class="drag_img">
+            <img src="${dragData[list].img}">
+          </div>
+          <span>
+            ${dragData[list].title}
+          </span>
+          <p class="drag_contents">
+            ${dragData[list].contents}
+          </p>
+        `;
+
+        dragList.appendChild(listItem);
+
+    }
 
     /* events fired on the draggable target */
     const source = document.querySelectorAll("#draggable a");
@@ -10,8 +70,14 @@ document.addEventListener("DOMContentLoaded", function () {
         source[i].addEventListener("dragstart", (event) => {
             // store a ref. on the dragged elem
             dragged = event.target;
+
             // make it half transparent
             event.target.classList.add("dragging");
+
+            const imgElement = dragged.querySelector("img");
+
+            // if (event.target == imgElement)
+            //     event.stopPropagation(); 
         });
 
         source[i].addEventListener("dragend", (event) => {
@@ -23,6 +89,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ==================================================
 
+    let dragged;
+
     /* events fired on the drop targets */
     const target = document.getElementById("droptarget");
 
@@ -30,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // prevent default to allow drop
         event.preventDefault();
     }, false);
-    
+
     target.addEventListener("dragenter", (event) => {
         // highlight potential drop target when the draggable element enters it
         if (event.target.classList.contains("droptarget")) {
@@ -54,6 +122,11 @@ document.addEventListener("DOMContentLoaded", function () {
             event.target.classList.remove("dragover");
 
             var cloneFactor = dragged.cloneNode(true);
+            var dragContents = cloneFactor.querySelector('.drag_contents');
+
+            if (dragContents) {
+                dragContents.remove();
+            }
             event.target.appendChild(cloneFactor);
 
             cloneFactor.classList.remove("dragging");
@@ -65,7 +138,6 @@ document.addEventListener("DOMContentLoaded", function () {
             cloneFactor.append(cloneFactorDel);
 
             var deleteEvent = document.querySelectorAll('.delete_event');
-            console.log(deleteEvent);
 
             for (var i = 0; i < deleteEvent.length; i++) {
                 deleteEvent[i].addEventListener("click", function (event) {
@@ -77,8 +149,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    var droptargetFactor = querySelectorAll('droptarget a');
-    var droptargetZone = document.querySelector('droptarget_zone');
+    // var droptargetFactor = querySelectorAll('droptarget a');
+    // var droptargetZone = document.querySelector('droptarget_zone');
 
 
 });
