@@ -26,23 +26,29 @@ document.addEventListener("DOMContentLoaded", function () {
     /* events fired on the drop targets */
     const target = document.getElementById("droptarget");
 
-    target.addEventListener(
-        "dragover",
-        (event) => {
-            // prevent default to allow drop
-            event.preventDefault();
-        },
+    target.addEventListener("dragover", (event) => {
+
+        // prevent default to allow drop
+        event.preventDefault();
+    },
         false
     );
 
     target.addEventListener("dragenter", (event) => {
+
         // highlight potential drop target when the draggable element enters it
         if (event.target.classList.contains("dropzone")) {
+
+            console.log('dragenter');
+            console.log(event)
+            console.log(event.target);
+
             event.target.classList.add("dragover");
         }
     });
 
     target.addEventListener("dragleave", (event) => {
+
         // reset background of potential drop target when the draggable element leaves it
         if (event.target.classList.contains("dropzone")) {
             event.target.classList.remove("dragover");
@@ -50,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     target.addEventListener("drop", (event) => {
+
         // prevent default action (open as link for some elements)
         event.preventDefault();
         // move dragged element to the selected drop target
