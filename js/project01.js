@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         listItem.href = "javascript:void(0)";
         listItem.innerHTML = `
           <div class="drag_img">
-            <img src="${dragData[list].img}">
+            <img draggable="false" src="${dragData[list].img}">
           </div>
           <span>
             ${dragData[list].title}
