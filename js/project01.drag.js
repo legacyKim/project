@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
             const imgElement = dragged.querySelector("img");
 
             // if (event.target == imgElement)
-            //     event.stopPropagation(); 
+            //     event.stopPropagation();
         });
 
         source[i].addEventListener("dragend", (event) => {
@@ -95,32 +95,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const target = document.getElementById("droptarget");
 
     target.addEventListener("dragover", (event) => {
-<<<<<<< HEAD
 
         // prevent default to allow drop
         event.preventDefault();
     },
         false
     );
-=======
-        // prevent default to allow drop
-        event.preventDefault();
-    }, false);
->>>>>>> 1f255eed89a83c51359f96c852054097d779c33e
 
     target.addEventListener("dragenter", (event) => {
 
         // highlight potential drop target when the draggable element enters it
-<<<<<<< HEAD
         if (event.target.classList.contains("dropzone")) {
 
             console.log('dragenter');
             console.log(event)
             console.log(event.target);
 
-=======
-        if (event.target.classList.contains("droptarget")) {
->>>>>>> 1f255eed89a83c51359f96c852054097d779c33e
             event.target.classList.add("dragover");
         }
     });
