@@ -26,7 +26,7 @@ main { position: relative; display: block; height: 100%; padding-bottom: 100px; 
 .main_btn>li { position: relative; display: block; margin-right: 4px; padding: 8px 3px 9px; border-radius: 40px; overflow: hidden; }
 .main_btn>li:hover a { color: var(--main-color); transition: all 0.3s ease-in-out !important; }
 .main_btn>li:hover div.btn_rotate { background: var(--main-color); transition: all 0.3s ease-in-out !important; }
-.main_btn>li>a { position: relative; color: var(--font-color); border-radius: 40px; font-size: 14px; font-weight: 700; line-height: 1.5; padding: 8px 17px 9px; background-color: var(--background-color); transition: all 0.7s ease-in-out; }
+.main_btn>li>a { position: relative; color: var(--font-color); border-radius: 40px; font-size: 14px; font-weight: 700; line-height: 1.5; padding: 8px 17px 8.5px; background-color: var(--background-color); transition: all 0.7s ease-in-out; }
 
 section { position: relative; display: block; min-height: 500px; margin-bottom: 200px; opacity: 0; margin-top: -200px; transform: translateY(100px); transition: all 0.3s ease-in-out; }
 section:last-child { margin-bottom: 0; }
