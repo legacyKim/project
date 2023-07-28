@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
         listItem.href = "javascript:void(0)";
         listItem.innerHTML = `
           <div class="drag_img">
-            <img src="${dragData[list].img}">
+            <img draggable="false" src="${dragData[list].img}">
           </div>
           <span>
             ${dragData[list].title}
@@ -95,12 +95,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const target = document.getElementById("droptarget");
 
     target.addEventListener("dragover", (event) => {
-
         // prevent default to allow drop
         event.preventDefault();
-    },
-        false
-    );
+    }, false);
 
     target.addEventListener("dragenter", (event) => {
 
@@ -110,7 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('dragenter');
             console.log(event)
             console.log(event.target);
-
+        }
+        if (event.target.classList.contains("droptarget")) {
             event.target.classList.add("dragover");
         }
     });
